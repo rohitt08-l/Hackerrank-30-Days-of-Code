@@ -17,5 +17,5 @@ def check(N):
         print("Not Weird")
 
 if __name__ == '__main__':
-    N = int(input().strip())
+    N = int(input("Enter a positive integer: ").strip())
     check(N)
