@@ -18,4 +18,8 @@ n = int(input())
 my_calculator = Calculator()
 s = my_calculator.divisorSum(n)
 print("I implemented: " + type(my_calculator).__bases__[0].__name__)
+<<<<<<< HEAD
 print(s)
+=======
+print(s)
+>>>>>>> cfc6c7f030cc49b950ef0dfba8b3274aaab7723e
