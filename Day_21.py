@@ -1,44 +1,31 @@
-#include <iostream>
-#include <vector>
-#include <string>
+def print_array(arr):
+    """
+    Print each element of the list on a new line.
+    """
+    for item in arr:
+        print(item)
 
-using namespace std;
+def main():
+    # Process integer list
+    try:
+        # Read the number of elements
+        n_int = int(input().strip())
+        int_list = []
+        for _ in range(n_int):
+            int_list.append(input().strip())
+            
+        # Process string list
+        n_str = int(input("Enter the number of strings: ").strip())
+        str_list = []
+        for _ in range(n_str):
+            str_list.append(input("Enter a string: ").strip())
 
+        # Call the generic function
+        print_array(int_list)
+        print_array(str_list)
+        
+    except EOFError:
+        pass
 
-/**
-*    Name: printArray
-*    Print each element of the generic vector on a new line. Do not return anything.
-*    @param A generic vector
-**/
-
-// Write your code here
-template <typename T>
-void printArray(vector<T> a) {
-    for (T i : a) {
-        cout << i << endl;
-    }
-}
-int main() {
-	int n;
-	
-	cin >> n;
-	vector<int> int_vector(n);
-	for (int i = 0; i < n; i++) {
-		int value;
-		cin >> value;
-		int_vector[i] = value;
-	}
-	
-	cin >> n;
-	vector<string> string_vector(n);
-	for (int i = 0; i < n; i++) {
-		string value;
-		cin >> value;
-		string_vector[i] = value;
-	}
-
-	printArray<int>(int_vector);
-	printArray<string>(string_vector);
-
-	return 0;
-}
+if __name__ == "__main__":
+    main()
